@@ -17,6 +17,7 @@ fuzz的过程中，频繁的修改fuzzer代码，并验证思路是很普遍的过程。
 去年8月初，无意间发现了微软的Chakra这个js引擎，
 
 既然V8可以用来做nodejs, 辅助后端开发。
+#Fuzz Windows Via Javascript
 
 何不用用js来写fuzzer,语法和C很接近，想必修改代码起来会很方便， 移植之前c写的fuzzer也会很容易。
 
