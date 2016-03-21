@@ -1,3 +1,5 @@
+#Fuzz Windows Via Javascript
+
 Microsoft in February and March patched my two win32k reported vulnerability in the end of last year MS16-018 / CVE-2016-0048, M16-034 / CVE-2016-0096,
 
 Details about these two vulnerabilities, who are interested can look at PatchDiff, do not write this today.
@@ -19,7 +21,7 @@ Since the V8 can be used for nodejs, auxiliary back-end development.
 
 Why not use js to write fuzzer, and C syntax is very close, and presumably it will be very easy to modify the code before the transplant write c fuzzer will be very easy.
 
-Chakra began to study the document, which is later JSRT project, meaning that Javascript Runtime,
+began to study the Chakra's document, which is later JSRT project, meaning that Javascript Runtime,
 
 
 Chakra itself is just a basic js engine, can only perform basic expressions.
@@ -27,7 +29,7 @@ Chakra itself is just a basic js engine, can only perform basic expressions.
 In the MS documentation for use js just want to be as a plug-language software to the SDK functions required to provide each one write a wrapper function after registration with JsCreateFunction, js can call.
 
 
-But my goal is to use js to Fuzz core, faced with the entire operating system, win32 api function too much, it is impossible to write a c each function wrapper function to call the js.
+But my goal is to use js to Fuzz windows kernel, faced with the entire operating system, win32 api function too much, it is impossible to write a c each function wrapper function to call the js.
 
 So think of some tips to hack this process.
 
