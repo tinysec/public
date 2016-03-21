@@ -91,3 +91,5 @@ function NtGdiAngleArc( arg_01,  arg_02 ,  arg_03,  arg_04 ,  arg_05,  arg_06 )
 于是有了后来的 CVE-2016-0096 ，可能是第一个用js fuzz出来的内核洞。
 
 蓝屏时，就可以看到一个很有意思的栈，从jscript一路到内核。
+
+![](./jsfuzz.jpg)

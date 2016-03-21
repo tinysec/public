@@ -88,3 +88,5 @@ In early November last year, because of a game, switch targets to win32k, just t
 So with the later CVE-2016-0096, it may be the first to use js fuzz out of the core hole.
 
 When the blue screen, you can see a very interesting stack from jscript all the way to the core.
+
+![](./jsfuzz.jpg)
