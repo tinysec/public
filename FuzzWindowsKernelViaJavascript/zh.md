@@ -1,3 +1,5 @@
+#Fuzz Windows Via Javascript
+
 微软在今年2月和3月补了我去年年底报的2个win32k里的漏洞MS16-018/CVE-2016-0048 ,M16-034/CVE-2016-0096,
 
 关于这2个漏洞的细节，各位同学有兴趣可以Diff一下,今天这篇不写.
@@ -17,7 +19,7 @@ fuzz的过程中，频繁的修改fuzzer代码，并验证思路是很普遍的过程。
 去年8月初，无意间发现了微软的Chakra这个js引擎，
 
 既然V8可以用来做nodejs, 辅助后端开发。
-#Fuzz Windows Via Javascript
+
 
 何不用用js来写fuzzer,语法和C很接近，想必修改代码起来会很方便， 移植之前c写的fuzzer也会很容易。
 
