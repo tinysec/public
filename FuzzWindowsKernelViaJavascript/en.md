@@ -6,20 +6,21 @@ Details about these two vulnerabilities, who are interested can look at PatchDif
 
 For both vulnerabilities behind the story, but added a bit mean.
 
-fuzz process, frequent changes fuzzer code, and verify that the idea is a very common procedure.
+in the fuzz process, frequent changes fuzzer code, and verify that the idea is a very common procedure.
 
 In order to ensure a clean, fuzz virtual machine environment where there is no third-party software installed. and so
 
 After each change in the physical machine in fuzzer code, then compiled, and then transferred to the virtual machine, is a cumbersome and inefficient thing.
 
-When beginning fuzzer are written in C, so in the virtual machine also installed a set of WDK build environment, then you need to verify every idea in the virtual machine, use Notepad ++ directly modify fuzzer code, WDK compile, execute result.
+When beginning fuzzer are written in C, so in the virtual machine also installed a set of WDK build environment, then you need to verify every idea in the virtual machine, 
+use Notepad ++ directly modify fuzzer code, WDK compile, and then execute the compiled bin.
 
 
 In early August last year, inadvertently discovered this js Microsoft's Chakra engine,
 
 Since the V8 can be used for nodejs, auxiliary back-end development.
 
-Why not use js to write fuzzer, and C syntax is very close, and presumably it will be very easy to modify the code before the transplant write c fuzzer will be very easy.
+Why not use js to write fuzzer, and the syntax is very close to C, and presumably it will be very easy to modify the code before the transplant write c fuzzer will be very easy.
 
 began to study the Chakra's document, which is later JSRT project, meaning that Javascript Runtime,
 
