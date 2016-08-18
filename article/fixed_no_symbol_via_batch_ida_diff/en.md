@@ -2,8 +2,8 @@
 
 well , sometimes microsoft remove symbol  make it diffcult for us to reserve it .
 there are two types,
-  never released with a symbol like atmfd.dll or hvix64.exe
-  provide symbol but remove at new version like tagWND of win32k.syswin32kfull.sys
+  *  never released with a symbol like atmfd.dll or hvix64.exe
+  *  provide symbol but remove at new version like tagWND of win32k.syswin32kfull.sys
 
 if we can detect the function name  , it will help us to understand.
 
@@ -30,13 +30,16 @@ for example , diff hvix64.exe with kdcom.dll
 
 diff one file only provide little same function, so i wrote a script to batch diff no-symbol-file with had-symol-bin-folder
 
- first i need choose file that had symbols , via CopyHadSymbolBinFiles.sys
+ *  first i need choose file that had symbols , via CopyHadSymbolBinFiles.sys 
    ![](./image/had_symbol_bin_folder.png)
 
- batch run IDA analyze these files to idb
-  ![](./image/batch_ida.png)
+ *  batch run IDA analyze these files to idb 
+   ![](./image/batch_ida.png)
+  
+ *  after that i got a folder of idb about all file that had symbols at system32 
+   ![](./image/idb_folder.png)
 
- batch diff no-symbol-file.idb with had-symbol-file folder to build a map file which about rva - name , with JSON style
+ *  batch diff no-symbol-file.idb with had-symbol-file folder to build a map file which about rva - name , with JSON style
 ```javascript
    {
 	0x0000000000244D80 memset,
@@ -59,8 +62,9 @@ diff one file only provide little same function, so i wrote a script to batch di
 	0x0000000000237990 __GSHandlerCheck
   }
 ```
- mixed these map file to a unique one 
- applay final rva-name map to no-symbol-file
+ *  mixed these map file to a unique one 
+ *  applay final rva-name map to no-symbol-file
 
 ## now , you got the right symbol name.
+
 
