@@ -25,16 +25,16 @@ static main()
 wapper this opreation with my JSRT , it will like this.
 
 for example , diff hvix64.exe with kdcom.dll
-![](.diff.png)
+![](./image/diff.png)
 
 
 diff one file only provide little same function, so i wrote a script to batch diff no-symbol-file with had-symol-bin-folder
 
  first i need choose file that had symbols , via CopyHadSymbolBinFiles.sys
-   ![](.had_symbol_bin_folder.jpg)
+   ![](./image/had_symbol_bin_folder.jpg)
 
  batch run IDA analyze these files to idb
-  ![](.batch_ida.jpg)
+  ![](./image/batch_ida.jpg)
 
  batch diff no-symbol-file.idb with had-symbol-file folder to build a map file which about rva - name , with JSON style
 ```javascript
