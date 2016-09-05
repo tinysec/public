@@ -1,7 +1,6 @@
 WINDBG>!js MessageTable.js
 MessageTable = 0x9f687150  
 gapfnScSendMessage = 0x9f680b50  
---------
 
 |msg_value|msg_name|fnIndex|RoutineName  
 |----|----|----|----  
