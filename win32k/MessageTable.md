@@ -3,6 +3,7 @@ WINDBG>!js MessageTable.js
 win32kfull!MessageTable = 0x9f687150  
 win32kfull!gapfnScSendMessage = 0x9f680b50  
 win32kfull!gapfnMessageCall = 0x9f680a30  
+
 |msg_value|msg_name|gapfn_index|gapfnScSendMessage|gapfnMessageCall
 |----|----|----|----|----
 |0x000|WM_NULL|0x00|win32kfull!SfnDWORD|win32kfull!NtUserfnDWORD
