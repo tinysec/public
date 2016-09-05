@@ -1,6 +1,7 @@
 WINDBG>!js fnid.js
 ===========================
 win32kfull!mpFnidPfn = 0x9f6a0248  
+when uMsg >= 0x400 or win32kfull!NtUserfnDWORD == gapfnMessageCall[MessageTable[uMsg]]
 
 |fnid|name|fnIndex|mpFnidPfn
 |----|----|----|----
