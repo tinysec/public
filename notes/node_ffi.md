@@ -19,24 +19,31 @@ returnType
 
 usage
 ```javascript
-var ref = require('ref');
-var ffi = require('ffi');
-var ref_array = require('ref-array');
-var ref_struct = require('ref-struct');
-var ref_union = require('ref-union');
-var ref_wchar = require('ref-wchar');
+const printf = require('cprintf').printf;
+const sprintf = require('cprintf').sprintf;
 
+const ref = require('ref');
+const ffi = require('ffi');
+const ref_array = require('ref-array');
+const ref_struct = require('ref-struct');
+const ref_union = require('ref-union');
+const ref_wchar = require('ref-wchar');
 
-var HANDLE = ref.types.void;
+const HANDLE = ref.types.void;
 
-ffi.Library(
+var kernel32 = ffi.Library( 'kernel32.dll' ,
+{
+    // ULONG __stdcall GetLogicalDrives();
+    'GetLogicalDrives' : [ 'ulong' , [] , {abi : ffi.FFI_STDCALL } , null ],
 
-// ULONG __stdcall GetLogicalDrives();
-'GetLogicalDrives' : [ 'ulong' , [] , {abi : ffi.FFI_STDCALL } ],
-
-// BOOL __stdcall CloseHandle(HANDLE hHandle);
-'kernel32.dll', { "CloseHandle" : [ 'int' , [HANDLE], { abi : ffi.FFI_STDCALL } ] }
+    // BOOL __stdcall CloseHandle(HANDLE hHandle);
+    "CloseHandle" : [ 'int' , [HANDLE], { abi : ffi.FFI_STDCALL } , null ] ,
+}
 );
+
+// Get Logical Drive Mask
+var nDriveMask = kernel32.GetLogicalDrives();
+
 ```
 
 
