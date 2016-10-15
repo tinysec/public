@@ -37,7 +37,7 @@ var kernel32 = ffi.Library( 'kernel32.dll' ,
     'GetLogicalDrives' : [ 'ulong' , [] , {abi : ffi.FFI_STDCALL } , null ],
 
     // BOOL __stdcall CloseHandle(HANDLE hHandle);
-    "CloseHandle" : [ 'int' , [ HANDLE ], { abi : ffi.FFI_STDCALL } , null ] ,
+    "CloseHandle" : [ 'int' , [ HANDLE ], { abi : ffi.FFI_STDCALL }  ] ,
 }
 );
 
