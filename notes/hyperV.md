@@ -6,7 +6,4 @@ Set-VMProcessor -VMName "win10_x86" -ExposeVirtualizationExtensions $false
 
 
 
-netsh int ip set global taskoffload=disabled
-netsh int tcp set global RSS=disabled
-netsh interface tcp set global autotuninglevel=disabled
-netsh int tcp set global chimney=disabled
+New-NetNat -Name NAT -InternalIPInterfaceAddressPrefix 192.168.30.0/24
