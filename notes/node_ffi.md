@@ -1,7 +1,7 @@
 # ffi fast reference
 
 ```javascript
-ffi.Library(libraryFile, { functionSymbol: [ returnType, [ arg1Type, arg2Type, ... ], [option] ] , [lib] } );
+ffi.Library(libraryFile, { functionSymbol: [ returnType, [ arg1Type, arg2Type, ... ], [option] ]  } );
 ```
 option list
  * abi  
@@ -34,7 +34,7 @@ const HANDLE = ref.types.void;
 var kernel32 = ffi.Library( 'kernel32.dll' ,
 {
     // ULONG __stdcall GetLogicalDrives();
-    'GetLogicalDrives' : [ 'ulong' , [] , {abi : ffi.FFI_STDCALL } , null ],
+    'GetLogicalDrives' : [ 'ulong' , [] , {abi : ffi.FFI_STDCALL }  ],
 
     // BOOL __stdcall CloseHandle(HANDLE hHandle);
     "CloseHandle" : [ 'int' , [ HANDLE ], { abi : ffi.FFI_STDCALL }  ] ,
