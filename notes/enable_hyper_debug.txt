@@ -1,0 +1,7 @@
+bcdedit /hypervisorsettings serial DEBUGPORT:1 BAUDRATE:115200
+bcdedit /set hypervisordebug on
+bcdedit /set hypervisorlaunchtype auto
+bcdedit /set dbgtransport kdhvcom.dll
+bcdedit /dbgsettings serial DEBUGPORT:1 BAUDRATE:115200
+bcdedit /debug on
+bcdedit /set bootdebug on
