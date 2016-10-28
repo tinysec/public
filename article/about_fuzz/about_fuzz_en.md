@@ -46,7 +46,7 @@ Faced with a large black box system, fuzzer the high cost of time, so we save as
 Of the time essential, commonly known as "check out the location" to understand where the system analysis of external data, how to use layered thinking, direct testing of the subsystem.
 
 The whole process is,
-1. Explore the black box system to resolve the external data subsystem,
+1.  xplore the black box system to resolve the external data subsystem,
 2. Hierarchical testing of this subsystem
 3. Capture system due to the analysis of the "abnormal"
 4. Analyze these exceptions.
@@ -78,4 +78,7 @@ Summary, fuzz is a very useful method, but also a very complex idea.
 Each company itself more and more attention to fuzz, after the difficulty of mining will be more and more high.
 Above, just a little thinking about fuzz of mine.
 
-## When you think you had understood the fuzz, think about it again.
+
+## When you think you had understood the fuzz, think about it again
+
+
